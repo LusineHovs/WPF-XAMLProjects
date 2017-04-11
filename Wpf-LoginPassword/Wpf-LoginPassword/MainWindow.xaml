@@ -1,0 +1,19 @@
+﻿<Window x:Class="Wpf_LoginPassword.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_LoginPassword"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <Label x:Name="label" Content="Login" HorizontalAlignment="Center" FontFamily="Ravie" FontSize="14"/>
+        <TextBox Width="100" Name="Login" Height="20"  Background="Azure" Margin="2" RenderTransformOrigin="0.538,-0.447" />
+        <Label x:Name="label1" Content="Password" FontFamily="Ravie" TextOptions.TextFormattingMode="Ideal" HorizontalAlignment="Center"/>
+        <PasswordBox x:Name="Password" Width="100" Height="20" Background="Aquamarine" Margin="0 10 0 10" />
+        <CheckBox x:Name="Stay" Content="Stay" HorizontalAlignment="Center" Margin="10" FontFamily="Ravie" Checked="Stay_Checked"/>
+
+        <Button x:Name="button" Content="Sign In" Background="Gold" HorizontalAlignment="Center" FontWeight="Bold" FontFamily="SketchFlow Print" FontSize="16" Click="button_Click"/>
+
+    </StackPanel>
+</Window>
