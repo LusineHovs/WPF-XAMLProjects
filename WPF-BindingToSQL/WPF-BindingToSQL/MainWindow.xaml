@@ -1,0 +1,50 @@
+﻿<Window x:Class="WPF_BindingToSQL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_BindingToSQL"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Background="Pink" x:Name="gridMain">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="135*"/>
+            <ColumnDefinition Width="367*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="170*"/>
+        </Grid.RowDefinitions>
+
+        <ListBox Name="listBooks"
+                 Visibility="Collapsed"
+                 Grid.ColumnSpan="2"
+                 Height="90"
+                 Margin="10"
+                 SelectionChanged="listBooks_SelectionChanged"
+                 >
+        </ListBox>
+
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2"
+                    Orientation="Horizontal" Background="White">
+
+            <TextBox Name="textBoxID" VerticalAlignment="Center" Width="120" Margin="10,0,10,0"></TextBox>
+            <Button Content="Get book inserting ID" Name="buttonGetBook" VerticalAlignment="Center" Padding="2" Click="buttonGetBook_Click"/>
+            <Button Content="Update data in the DB" Name="updateBook" VerticalAlignment="Center" Padding="2" Margin="10,0,0,0" Click="updateBook_Click"/>
+            <Button Content="List of books" Name="buttonShowList" VerticalAlignment="Center" Margin="10,0,0,0" Padding="2" Click="buttonShowList_Click"/>
+
+           
+        </StackPanel>
+        <TextBox Text="{Binding Title}" HorizontalAlignment="Stretch" Name="textBoxTitle" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBox Text="{Binding Author}" HorizontalAlignment="Stretch" Name="textBoxAuthor" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBox Text="{Binding Description}" HorizontalAlignment="Stretch" Name="textBoxDescription" VerticalAlignment="Center" TextWrapping="Wrap"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Book" />
+        <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Author" />
+        <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Description" />
+    </Grid>
+</Window>
