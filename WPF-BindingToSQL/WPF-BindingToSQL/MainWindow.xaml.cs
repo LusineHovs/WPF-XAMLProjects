@@ -83,5 +83,7 @@ namespace WPF_BindingToSQL
             }
             isCollapsed = !isCollapsed;
         }
+
+        
     }
 }
