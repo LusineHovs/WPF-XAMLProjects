@@ -1,6 +1,6 @@
 **DataContext**
 
-*DataContext* is one of the most fundamental concepts in Data Binding.
+**DataContext** is one of the most fundamental concepts in Data Binding.
 The Binding object needs to get its data from somewhere, and there are a few ways to specify the source of the data like 
 using Source property directly in the Binding, inheriting a DataContext from the nearest element when traversing up in the tree, 
 setting the ElementName and RelativeSource properties in the Binding object.
