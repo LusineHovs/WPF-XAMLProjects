@@ -1,7 +1,6 @@
  **Below you can see how does it work**
  
- ![gif](https://cloud.githubusercontent.com/assets/24455176/26050122/92d56682-396e-11e7-8241-df966fcce296.gif)
-
+ ![gif](https://cloud.githubusercontent.com/assets/24455176/26050314/2fd93198-396f-11e7-9cc0-4b1ab29d14a6.gif)
 
 
 
